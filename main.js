@@ -1,12 +1,13 @@
 
 const myCanvas = document.getElementById("myCanvas").getContext("2d");
-
+const canvasRect = document.getElementById("myCanvas").getBoundingClientRect();
 
 
 const marginY = 53;
 function paint(event) {
-    if (event.buttons === 1) { // 1 = left button
-        myCanvas.lineTo(event.clientX , event.clientY - marginY); // mouse x, mouse y
+    if (event.buttons !== 1) return 
+        { // 1 = left button
+        myCanvas.lineTo(event.clientX - canvasRect.left, event.clientY - canvasRect.top);  // mouse x, mouse y
         myCanvas.stroke(); // Do it
     }
 }
@@ -15,8 +16,8 @@ function mark() {
     myCanvas.beginPath();
 }
 
-function penSize(size) {
-    myCanvas.lineWidth = size;
+function penSize(width) {
+    myCanvas.lineWidth = width;
 }
 
 function color(color) {
