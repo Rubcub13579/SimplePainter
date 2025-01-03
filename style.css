@@ -1,35 +1,119 @@
-
-p {
-    font-family: 'Franklin Gothic Medium';
-    border: solid;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    margin: 10px
-}
-
 body {
     margin: 0;
     padding: 0;
-    
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fdf6e3;
+    text-align: center;
 }
+
+#titleContainer {
+    margin: 20px 0;
+}
+
+#rainbowText {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 3s infinite linear;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    margin: 10px 0;
+}
+
 .buttonContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#colorContainer,
+#thicknessContainer {
+    display: flex;
+    gap: 10px;
     justify-content: center;
 }
 
-button {font-size: 20px; font-family: monospace;margin: 2px;}
+button {
+    font-size: 1.5rem;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
-canvas{ border: 1px solid;}
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
 
-/* .canvasContainer {
-    display: flex;
-        justify-content: center;
-} */
+.red {
+    background-color: red;
+}
 
-.red {background-color: red;}
-.green {background-color: green;}
-.blue {background-color: blue;}
-.yellow {background-color: yellow;}
-.magenta {background-color: magenta;}
-.cyan {background-color: cyan;}
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.magenta {
+    background-color: magenta;
+}
+
+.cyan {
+    background-color: cyan;
+}
+
+button:not(.red, .green, .blue, .yellow, .magenta, .cyan) {
+    background-color: #ccc;
+}
+
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid #333;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+span {
+    display: inline-block;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.7rem;
+    color: #444;
+    background-color: #ffd700;
+    /* Bright yellow for a cheerful look */
+    padding: 5px 10px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: transform 0.2s, background-color 0.2s;
+}

@@ -12,24 +12,30 @@
 <body>
 
     
-    <div class="pContainer">
-        <p id="rainbowText">Simpler Painter</p>
+    <div id="titleContainer">
+        <h1 id="rainbowText">Simpler Painter</h1>
     </div>
     <hr>
 
     <div class="buttonContainer">
-        <button class="red" onclick="color('red')"> &nbsp; </button>
-        <button class="green" onclick="color('green')"> &nbsp; </button>
-        <button class="blue" onclick="color('blue')"> &nbsp; </button>
-        <button class="yellow" onclick="color('yellow')"> &nbsp; </button>
-        <button class="magenta" onclick="color('magenta')"> &nbsp; </button>
-        <button class="cyan" onclick="color('cyan')"> &nbsp; </button>
-        <button onclick="penSize(1)">1</button>
-        <button onclick="penSize(2)">2</button>
-        <button onclick="penSize(3)">3</button>
-        <button onclick="penSize(4)">4</button>
-        <button onclick="penSize(5)">5</button>
-        <button onclick="erase()">ERASE</button>
+        <span>color: </span>
+        <div id="colorContainer">
+            <button class="red" onclick="color('red')"> &nbsp; </button>
+            <button class="green" onclick="color('green')"> &nbsp; </button>
+            <button class="blue" onclick="color('blue')"> &nbsp; </button>
+            <button class="yellow" onclick="color('yellow')"> &nbsp; </button>
+            <button class="magenta" onclick="color('magenta')"> &nbsp; </button>
+            <button class="cyan" onclick="color('cyan')"> &nbsp; </button>
+        </div>
+        <span>Thickness: </span>
+        <div id="thicknessContainer">
+            <button onclick="penSize(1)">1</button>
+            <button onclick="penSize(2)">2</button>
+            <button onclick="penSize(3)">3</button>
+            <button onclick="penSize(4)">4</button>
+            <button onclick="penSize(5)">5</button>
+            <button onclick="erase()">ERASE</button>
+        </div>
     </div>
 
 
