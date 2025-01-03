@@ -1,0 +1,35 @@
+
+p {
+    font-family: 'Franklin Gothic Medium';
+    border: solid;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+button {font-size: 20px; font-family: monospace;margin: 2px;}
+
+canvas{ border: 1px solid;}
+
+/* .canvasContainer {
+    display: flex;
+        justify-content: center;
+} */
+
+.red {background-color: red;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+.yellow {background-color: yellow;}
+.magenta {background-color: magenta;}
+.cyan {background-color: cyan;}
