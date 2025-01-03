@@ -41,5 +41,7 @@ function color(color) {
 
 // Erase the canvas
 function erase() {
+    let result = confirm("Are you sure you want to erase all?");
+    if(result)
     myCanvas.clearRect(0, 0, canvas.width, canvas.height);
 }
