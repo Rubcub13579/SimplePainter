@@ -11,39 +11,43 @@
 
 <body>
 
-    
     <div id="titleContainer">
         <h1 id="rainbowText">Simpler Painter</h1>
     </div>
     <hr>
 
     <div class="buttonContainer">
-        <span>color: </span>
+        <span>Color: </span>
         <div id="colorContainer">
-            <button class="red" onclick="color('red')"> &nbsp; </button>
-            <button class="green" onclick="color('green')"> &nbsp; </button>
-            <button class="blue" onclick="color('blue')"> &nbsp; </button>
-            <button class="yellow" onclick="color('yellow')"> &nbsp; </button>
-            <button class="magenta" onclick="color('magenta')"> &nbsp; </button>
-            <button class="cyan" onclick="color('cyan')"> &nbsp; </button>
-            <button class="white" onclick="color('white')"> &nbsp; </button>
-        </div>
-        <span>Thickness: </span>
-        <div id="thicknessContainer">
-            <button onclick="penSize(1)">1</button>
-            <button onclick="penSize(2)">2</button>
-            <button onclick="penSize(3)">3</button>
-            <button onclick="penSize(4)">4</button>
-            <button onclick="penSize(5)">5</button>
-            <button class="red" onclick="erase()">ERASE ALL</button>
+            <button class="red" onclick="color('red', this)" title="Red Color"> &nbsp; </button>
+            <button class="green" onclick="color('green', this)" title="Green Color"> &nbsp; </button>
+            <button class="blue" onclick="color('blue', this)" title="Blue Color"> &nbsp; </button>
+            <button class="yellow" onclick="color('yellow', this)" title="Yellow Color"> &nbsp; </button>
+            <button class="magenta" onclick="color('magenta', this)" title="Magenta Color"> &nbsp; </button>
+            <button class="cyan" onclick="color('cyan', this)" title="Cyan Color"> &nbsp; </button>
+            <button class="white" onclick="color('white', this)" title="White Color"> &nbsp; </button>
         </div>
     </div>
 
+    <div class="buttonContainer">
+        <span>Thickness: </span>
+        <div id="thicknessContainer">
+            <button onclick="penSize(1, this)" title="Thinnest Line">1</button>
+            <button onclick="penSize(2, this)" title="Thin Line">2</button>
+            <button onclick="penSize(3, this)" title="Medium Line">3</button>
+            <button onclick="penSize(4, this)" title="Thicker Line">4</button>
+            <button onclick="penSize(5, this)" title="Thickest Line">5</button>
+        </div>
+    </div>
 
-    <br>
+    <div class="buttonContainer">
+        <button onclick="saveCanvas()">Save Drawing</button>
+        <button class="red erase" onclick="erase()">Erase All</button>
+    </div>
 
-    <!-- <div class="canvasContainer"></div> -->
+    <div id="canvasContainer">
         <canvas onmousemove="paint(event)" onmousedown="mark()" onmouseenter="mark()" id="myCanvas" width="500" height="500"></canvas>
+    </div>
 
 </body>
 
