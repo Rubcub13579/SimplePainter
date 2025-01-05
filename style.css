@@ -86,7 +86,11 @@ button:hover {
     background-color: cyan;
 }
 
-button:not(.red, .green, .blue, .yellow, .magenta, .cyan) {
+.black {
+    background-color: black;
+}
+
+button:not(.red, .green, .blue, .yellow, .magenta, .cyan, .black) {
     background-color:white;
 }
 
