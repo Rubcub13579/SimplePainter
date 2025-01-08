@@ -1,6 +1,10 @@
 const canvas = document.getElementById("myCanvas");
 const myCanvas = canvas.getContext("2d");
 
+// Set the initial white background
+myCanvas.fillStyle = 'white';
+myCanvas.fillRect(0, 0, canvas.width, canvas.height);
+
 // Add touch support for mobile devices
 canvas.addEventListener("touchstart", startTouch, false);
 canvas.addEventListener("touchmove", paintTouch, false);
@@ -77,8 +81,12 @@ function setActiveButton(button, containerId) {
 // Erase the canvas
 function erase() {
     let result = confirm("Are you sure you want to erase all?");
-    if (result)
+    if (result) {
         myCanvas.clearRect(0, 0, canvas.width, canvas.height);
+        // Fill the canvas with white background again
+        myCanvas.fillStyle = 'white';
+        myCanvas.fillRect(0, 0, canvas.width, canvas.height);
+    }
 }
 
 // Resize canvas dynamically while preserving the drawing
